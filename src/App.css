@@ -1,0 +1,95 @@
+/* Dashboard Layout Wrapper styles */
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 260px;
+  max-width: 260px;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#sidebar.active {
+  margin-left: -260px;
+}
+
+/* Nav links styling */
+#sidebar ul.components {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#sidebar ul li a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+#sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-left-color: var(--primary-blue);
+}
+
+#sidebar ul li a.active {
+  background: rgba(13, 110, 253, 0.15) !important;
+  color: #fff !important;
+  border-left-color: var(--primary-blue);
+  font-weight: 600;
+}
+
+/* Header/Topbar styles */
+#sidebarCollapse {
+  transition: all 0.2s;
+}
+
+/* Page content section */
+#content {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Keyframes for micro-animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(13, 110, 253, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+  }
+}
+
+/* Responsive collapse rules */
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -260px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+  }
+}
+
+/* Dashboard metric cards */
+.metric-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Dashed borders for empty status */
+.border-dashed {
+  border-style: dashed !important;
+}

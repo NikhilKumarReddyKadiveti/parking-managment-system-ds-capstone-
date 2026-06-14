@@ -1,0 +1,94 @@
+/* Smart Parking Design System Variables */
+:root {
+  --bg-dark: #0a0c12;
+  --card-dark: #151921;
+  --text-white: #f8f9fa;
+  --text-muted: #adb5bd; /* Improved contrast from #8b92a5 */
+  --primary-blue: #0d6efd;
+  --secondary-gray: #1e222d;
+  
+  /* Typography */
+  --font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Text Contrast Classes */
+.text-secondary {
+  color: var(--text-muted) !important;
+}
+
+.text-muted {
+  color: #949ab1 !important;
+}
+
+.small.text-secondary, .small.text-muted {
+  color: #a0a6ba !important; /* Slightly brighter for small text */
+}
+
+/* Custom Scrollbar for Sleek Admin look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-gray);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue);
+}
+
+/* Custom card overrides */
+.card {
+  border-radius: 0.75rem !important;
+}
+
+/* Table styling override for dark theme */
+.table-dark {
+  --bs-table-bg: var(--card-dark) !important;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.02) !important;
+  --bs-table-hover-bg: rgba(255, 255, 255, 0.04) !important;
+  color: var(--text-white) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.table th, .table td {
+  padding: 1rem 0.75rem !important;
+}
+
+/* Form inputs styling */
+.form-control, .form-select {
+  border-radius: 0.5rem !important;
+  padding: 0.6rem 1rem !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #12141a !important;
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+  color: #fff !important;
+}
+
+/* Custom alerts */
+.alert {
+  border-radius: 0.5rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
